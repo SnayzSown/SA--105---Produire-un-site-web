@@ -1,0 +1,31 @@
+<!-- Lecture du paramètre dans l'URL envoyé dans l'URL par envoi_param.html -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <link href="style.css" rel="stylesheet">
+  <title>JavaScript</title>
+</head>
+<body>
+  <header>
+    <h1 class="titre">JavaScript</h1>
+  </header>
+
+  <main>
+    <h1>Passage d'un paramètre dans l'URL</h1>
+
+    <div class="ok">
+      <a href="envoi_param.html">Retour</a>
+    </div>
+
+    <div class="resultat"></div>
+  </main>
+
+  <script>
+    let param = new URLSearchParams(location.search);
+    let boisson = param.get('boisson');
+    document.querySelector(".resultat").innerHTML+="<br>Valeur transmise dans l'URL : "+boisson;
+  </script>
+</body>
+</html>

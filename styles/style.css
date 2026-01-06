@@ -1,197 +1,165 @@
-/* Réinitialisation simple et polices */
-* {
-    box-sizing: border-box; /* Pour que padding et border ne dépassent pas la taille */
-    margin: 0; /* Enlève les marges par défaut */
-    padding: 0; /* Enlève les paddings par défaut */
-}
+/* Importation d'une police futuriste (Orbitron) depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+/* --- RÉGLAGES GÉNÉRAUX --- */
 body {
-    font-family: Arial, sans-serif; /* Police de caractères simple */
-    line-height: 1.6; /* Espacement des lignes */
-    background-color: #f4f4f4; /* Fond gris très clair pour tout le corps */
-    color: #333; /* Couleur de texte sombre */
+    margin: 0; /* Enlève les marges blanches autour de la page */
+    font-family: Arial, sans-serif; /* Police par défaut */
+    background-color: #05050a; /* Couleur de fond très sombre (presque noir) */
+    color: white; /* Texte en blanc */
+    
+    /* Image de fond avec un filtre sombre par dessus */
 }
 
-/* --- Style du HEADER (en haut de la page) --- */
-header {
-    background-color: #f0f; /* Bleu de la maquette */
-    color: #0ff; /* Texte en blanc */
-    padding: 1.5rem; /* Espace intérieur */
-    text-align: center; /* Texte centré */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Petite ombre pour un effet de profondeur */
+/* Optimisation : Utiliser un pseudo-élément pour le fond fixe améliore grandement la fluidité */
+body::before {
+    content: "";
+    position: fixed; /* Remplace background-attachment: fixed de manière plus performante */
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1; /* Place le fond derrière le contenu */
+
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../images/photo-ville-futuriste-2.jpg);
+    background-size: cover; /* L'image couvre tout l'écran */
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
-header h1 {
-    font-size: 2.2rem; /* Taille du titre */
+/* --- PAGE D'ACCUEIL (index.html) --- */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: var(--bg-panel);
+    border: 1px solid var(--neon-pink);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(187, 19, 254, 0.521);
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-
-/* --- Style du MAIN (contenu principal) --- */
-main {
-    max-width: 1200px; /* Largeur maximale du contenu */
-    margin: 2rem auto; /* Marge en haut/bas, et centrage automatique */
-    padding: 1rem; /* Espace intérieur pour éviter que le contenu touche les bords */
+.hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
 }
 
-main h2 {
-    text-align: center; /* Titre "Mes SAE" centré */
-    margin-bottom: 2rem; /* Espace en dessous du titre */
-    color: #0ff; /* Couleur bleue pour le titre de section */
+/* --- TITRES --- */
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif; /* Application de la police futuriste */
+    text-transform: uppercase; /* Met tout en majuscules */
+    text-align: center; /* Centre le texte */
 }
 
-.btn-plus{
-    display: inline-block; /* Pour que le lien se comporte comme un bloc mais reste sur la ligne */
-    background-color: #f0f; /* couleur de la maquette */
-    color: white; /* Texte blanc */
-    padding: 0.75rem 1.5rem; /* Espace intérieur du bouton */
-    text-decoration: none; /* Enlève le soulignement des liens */
-    border-radius: 30px; /* Coins arrondis */
-    margin-top: 1rem; /* Espace au-dessus du bouton */
-    font-weight: bold; /* Texte en gras */
-    cursor: pointer; /* Le curseur devient une main au survol */
-    white-space: nowrap; /* Empêche le texte du bouton de passer à la ligne */  
+h1 {
+    color: #fff;
+    text-shadow: 0 0 10px #00f3ff; /* Effet de lumière (néon) bleu autour du texte */
+    margin-top: 30px;
 }
-.btn-plus:hover{
-    background-color: rgb(185, 0, 185); /* Rose encore plus foncé au survol */
+
+/* --- BOUTONS ET LIENS --- */
+a {
+    text-decoration: none; /* Enlève le soulignement moche des liens */
 }
-/* --- Styles pour la GRILLE des SAÉ (index.html) --- */
-/* Le conteneur qui organise les cartes */
+
+/* Style du bouton "ENTRER" sur l'accueil */
+.btn-start {
+    display: block; /* Le bouton prend sa propre ligne */
+    width: 200px; /* Largeur fixe */
+    margin: 20px auto; /* Centré horizontalement */
+    padding: 15px; /* Espace intérieur */
+    text-align: center;
+    background-color: #00f3ff; /* Fond bleu néon */
+    color: black; /* Texte noir */
+    font-weight: bold;
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 0 15px #00f3ff; /* Lumière autour du bouton */
+}
+.btn-start:hover {
+    background-color: white;
+    box-shadow: 0 0 40px var(--neon-cyan);
+    transform: scale(1.05);
+}
+/* Style du bouton retour */
+.btn-retour {
+    display: block;
+    width: 150px;
+    margin: 40px auto;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #00f3ff; /* Juste une bordure bleue */
+    color: #00f3ff; /* Texte bleu */
+    transition: 0.3s; /* Animation douce */
+}
+/* Au survol de la souris sur le bouton retour */
+.btn-retour:hover {
+    background-color: #00f3ff; /* Le fond devient bleu */
+    color: black; /* Le texte devient noir */
+}
+
+/* --- GRILLE DES PROJETS (sae.html) --- */
 .grid-container {
-    display: grid; /* On utilise CSS Grid pour la mise en page en grille */
-    /* Les cartes vont se placer sur des colonnes.
-       'repeat(auto-fill, minmax(300px, 1fr))' signifie :
-       - Remplir automatiquement la ligne avec des colonnes.
-       - Chaque colonne fait au minimum 300px et au maximum 1 fraction de l'espace disponible.
-    */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem; /* Espace entre les cartes */
+    display: grid; /* Active le mode grille */
+    /* Crée des colonnes automatiques de minimum 350px de large */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 20px; /* Espace entre les cases */
+    max-width: 1000px; /* Largeur max de la grille */
+    margin: 0 auto; /* Centrage de la grille */
+    padding: 20px;
 }
 
-/* Le style d'UNE SEULE carte SAÉ */
+/* Style de chaque carte SAE */
 .sae-card {
-    background: #fff; /* Fond blanc pour la carte */
-    border: 1px solid #ddd; /* Bordure grise très légère */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre légère pour donner du relief */
-    padding: 1.5rem; /* Espace intérieur de la carte */
-    text-align: center; /* Texte centré dans la carte */
-    transition: transform 0.2s ease-in-out; /* Animation douce au survol */
+    background: rgba(10, 15, 30, 0.8); /* Fond bleu foncé transparent */
+    border: 1px solid #00f3ff; /* Bordure fine bleue */
+    padding: 20px;
+    color: white;
+    transition: 0.3s; /* Animation au survol */
+    display: flex; /* Pour aligner le contenu */
+    justify-content: space-between; /* Espace entre gauche et droite */
+    align-items: center; /* Centrage vertical */
 }
 
+/* Au survol d'une carte */
 .sae-card:hover {
-    transform: translateY(-5px); /* La carte monte un peu au survol */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* L'ombre devient plus prononcée */
-}
-
-.sae-card img {
-    max-width: 100%; /* L'image ne dépasse pas la largeur de la carte */
-    height: auto; /* La hauteur s'ajuste pour garder les proportions */
-    border-radius: 5px; /* Coins arrondis pour l'image */
-    border: 1px solid #eee; /* Petite bordure autour de l'image */
-    margin-bottom: 1rem; /* Espace en dessous de l'image */
+    transform: scale(1.02); /* Grossit légèrement */
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.4); /* Ombre lumineuse */
+    border-color: #bc13fe; /* La bordure devient violette */
 }
 
 .sae-card h3 {
-    margin-bottom: 0.5rem; /* Espace en dessous du titre de la carte */
-    color: #00a8e8; /* Couleur bleue pour le titre de la carte */
-    font-size: 1.5rem; /* Taille du titre */
+    color: #00f3ff; /* Code SAE en bleu */
+    margin: 0;
 }
 
 .sae-card p {
-    font-size: 0.95rem; /* Taille du texte de description */
-    color: #666; /* Couleur grise pour la description */
-    margin-bottom: 1.5rem; /* Espace en dessous de la description */
-    min-height: 40px; /* S'assure que la description a une hauteur minimale */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 0.9em; /* Texte un peu plus petit */
+    color: #ddd; /* Gris clair */
+    margin: 0 10px; /* Marges sur les côtés */
+    flex: 1; /* Prend toute la place disponible au milieu */
 }
 
-
-/* --- Styles pour les BOUTONS --- */
-.btn, .btn-retour {
-    display: inline-block; /* Pour que le lien se comporte comme un bloc mais reste sur la ligne */
-    background-color: #ff8800; /* Vert de la maquette */
-    color: white; /* Texte blanc */
-    padding: 0.75rem 1.5rem; /* Espace intérieur du bouton */
-    text-decoration: none; /* Enlève le soulignement des liens */
-    border-radius: 30px; /* Coins arrondis */
-    margin-top: 1rem; /* Espace au-dessus du bouton */
-    font-weight: bold; /* Texte en gras */
-    cursor: pointer; /* Le curseur devient une main au survol */
-    transition: background-color 0.2s; /* Animation douce au survol */
-    white-space: nowrap; /* Empêche le texte du bouton de passer à la ligne */
+.fleche {
+    color: #bc13fe; /* Flèche violette */
+    font-weight: bold;
 }
 
-.btn:hover, .btn-retour:hover {
-    background-color: #7AAB32; /* Vert plus foncé au survol */
+/* --- PAGE DÉTAIL (detail.html) --- */
+#contenu-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8); /* Fond noir transparent */
+    padding: 30px;
+    border-left: 4px solid #bc13fe; /* Barre violette à gauche */
 }
 
-/* Bouton de retour spécifique */
-.btn-retour {
-    background-color: #555; /* Couleur gris foncé */
-    margin-top: 2.5rem; /* Plus d'espace au-dessus */
-    margin-left: auto; /* Centrage */
-    margin-right: auto; /* Centrage */
-    display: block; /* Prend toute la largeur disponible pour être centré avec auto */
-    width: fit-content; /* Le bouton ne prend que la largeur de son contenu */
-}
-.btn-retour:hover {
-    background-color: #333; /* Gris encore plus foncé au survol */
+#contenu-detail h3 {
+    text-align: left; /* Titres alignés à gauche */
+    color: #bc13fe; /* Titres en violet */
+    border-bottom: 1px solid gray; /* Ligne grise sous le titre */
+    padding-bottom: 10px;
 }
 
-
-/* --- Styles pour la PAGE DE DÉTAIL (sae.html) --- */
-#sae-detail-content {
-    background: #fff; /* Fond blanc */
-    padding: 2.5rem; /* Espace intérieur */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre légère */
+ul {
+    list-style-type: square; /* Puces carrées pour les listes */
+    line-height: 1.6; /* Espace entre les lignes */
 }
-
-#sae-detail-content h3 {
-    color: #00A8E8; /* Titres de section en bleu */
-    margin-top: 1.8rem; /* Espace au-dessus */
-    margin-bottom: 0.8rem; /* Espace en dessous */
-    border-bottom: 2px solid #00A8E8; /* Ligne bleue sous le titre */
-    padding-bottom: 5px; /* Espace entre le texte et la ligne */
-    font-size: 1.7rem; /* Taille du titre */
-}
-
-#sae-detail-content p {
-    margin-bottom: 1rem; /* Espace en dessous des paragraphes */
-    font-size: 1.1rem;
-}
-
-#sae-detail-content ul, #sae-detail-content ol {
-    margin-left: 2.5rem; /* Décalage pour les listes */
-    margin-bottom: 1rem; /* Espace en dessous des listes */
-    font-size: 1.05rem;
-}
-#sae-detail-content ul li, #sae-detail-content ol li {
-    margin-bottom: 0.5rem; /* Espace entre les éléments de liste */
-}
-
-
-#sae-detail-content .sae-image {
-    max-width: 100%; /* L'image ne dépasse pas la largeur du conteneur */
-    height: auto; /* La hauteur s'ajuste */
-    margin-top: 1.5rem; /* Espace au-dessus */
-    margin-bottom: 1.5rem; /* Espace en dessous */
-    border-radius: 5px; /* Coins arrondis */
-    border: 1px solid #ddd; /* Petite bordure */
-    display: block; /* Pour centrer l'image */
-    margin-left: auto; /* Centrage */
-    margin-right: auto; /* Centrage */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08); /* Ombre légère */
-}
-
-/* --- Style du FOOTER (en bas de la page) --- */
-footer {
-    text-align: center; /* Texte centré */
-    margin-top: 4rem; /* Grande marge au-dessus */
-    padding: 1.5rem; /* Espace intérieur */
-    background-color: #333; /* Fond gris très foncé */
-    color: white; /* Texte en blanc */
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Ombre légère vers le haut */
-} 

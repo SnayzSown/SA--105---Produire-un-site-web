@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détail SAÉ</title>
-    <link rel="stylesheet" href="Styles/style.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Mes SAÉ</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
 </head>
 <body>
     
     <header>
-        <h1 id="sae-titre">Affichage des SAÉ</h1>
+        <h1>LISTE DES SAÉS</h1>
     </header>
 
     <main>
-        <div id="sae-detail-content">
-        </div>
-
-        <a href="index.html" class="btn-retour">Retour au portfolio</a>
+        <div id="grille-sae" class="grid-container"></div>
+        
+        <a href="index.html" class="btn-retour"> <- Retour à l'accueil</a>
     </main>
 
+    <script src="js/data.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

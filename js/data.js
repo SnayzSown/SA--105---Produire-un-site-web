@@ -16,8 +16,9 @@ const SAE = {
       "R1.05": "Stratégies de communication et marketing",
       "R1.09": "Culture artistique",
       "R1.14": "Représentation et traitement de l’information",
-      "R1.16": "Économie, gestion et droit du numérique"
+      "R1.16": "Économie, gestion et droit du numérique",
     },
+    "pdf": "pdfs/you-are-a-pussy.pdf",
     "semestre": 1
   },
 
@@ -33,8 +34,9 @@ const SAE = {
       "R1.01": "Anglais",
       "R1.02": "Anglais Renforcé ou LV2",
       "R1.05": "Stratégies de communication et marketing",
-      "R1.06": "Expression, communication et rhétorique"
+      "R1.06": "Expression, communication et rhétorique",
     },
+    "pdf": "pdfs/you-are-a-pussy.pdf",
     "semestre": 1
   },
 
@@ -50,8 +52,9 @@ const SAE = {
     "ressources": {
       "R1.08": "Production graphique",
       "R1.09": "Culture artistique",
-      "R1.14": "Représentation et traitement de l’information"
+      "R1.14": "Représentation et traitement de l’information",
     },
+    "pdf": "pdfs/you-are-a-pussy.pdf",
     "semestre": 1
   },
 
@@ -68,8 +71,9 @@ const SAE = {
       "R1.01": "Anglais",
       "R1.07": "Écriture multimédia et narration",
       "R1.10": "Production audio et vidéo",
-      "R1.14": "Représentation et traitement de l’information"
+      "R1.14": "Représentation et traitement de l’information",
     },
+    "pdf": "pdfs/you-are-a-pussy.pdf",
     "semestre": 1
   },
 
@@ -86,8 +90,9 @@ const SAE = {
     "ressources": {
       "R1.11": "Intégration",
       "R1.12": "Développement Web",
-      "R1.13": "Hébergement"
+      "R1.13": "Hébergement",
     },
+    "pdf": "pdfs/you-are-a-pussy.pdf",
     "semestre": 1
   },
 
@@ -108,8 +113,9 @@ const SAE = {
       "R1.06": "Expression, communication et rhétorique",
       "R1.15": "Gestion de projet",
       "R1.16": "Économie, gestion et droit du numérique",
-      "R1.17": "Projet Personnel et Professionnel"
+      "R1.17": "Projet Personnel et Professionnel",
     },
+    "pdf": "pdfs/you-are-a-pussy.pdf",
     "semestre": 1
   },
 
@@ -125,8 +131,9 @@ const SAE = {
     "ressources": {
       "R2.03": "Ergonomie et Accessibilité",
       "R2.04": "Culture numérique",
-      "R2.16": "Représentation et traitement de l’information"
+      "R2.16": "Représentation et traitement de l’information",
     },
+    "pdf": "pdfs/you-are-a-pussy.pdf",
     "semestre": 2
   },
 
@@ -166,8 +173,9 @@ const SAE = {
       "R2.16": "Représentation et traitement de l’information",
       "R2.17": "Gestion de projet",
       "R2.18": "Économie, gestion et droit du numérique",
-      "R2.19": "Projet Personnel et Professionnel"
+      "R2.19": "Projet Personnel et Professionnel",
     },
+    "pdf": "pdfs/you-are-a-pussy.pdf",
     "semestre": 2
   },
 
@@ -186,8 +194,9 @@ const SAE = {
       "R2.12": "Intégration",
       "R2.13": "Développement Web",
       "R2.14": "Système d’information",
-      "R2.15": "Hébergement"
+      "R2.15": "Hébergement",
     },
+    "pdf": "pdfs/you-are-a-pussy.pdf",
     "semestre": 2
   },
 
@@ -201,8 +210,9 @@ const SAE = {
     },
     "ressources": {
       "R2.06": "Expression, communication et rhétorique",
-      "R2.19": "Projet Personnel et Professionnel"
+      "R2.19": "Projet Personnel et Professionnel",
     },
+    "pdf": "pdfs/you-are-a-pussy.pdf",
     "semestre": 2
   }
 }

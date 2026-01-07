@@ -163,3 +163,26 @@ ul {
     list-style-type: square; /* Puces carrées pour les listes */
     line-height: 1.6; /* Espace entre les lignes */
 }
+
+/* --- Style du bouton PDF --- */
+.btn-pdf {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: transparent; /* Fond transparent */
+    color: #bc13fe; /* Texte rose/violet */
+    border: 2px solid #bc13fe; /* Bordure rose/violet */
+    font-family: 'Orbitron', sans-serif; /* Police futuriste */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s; /* Animation douce */
+    box-shadow: 0 0 10px rgba(188, 19, 254, 0.3); /* Légère lueur */
+}
+
+/* Quand on passe la souris dessus */
+.btn-pdf:hover {
+    background-color: #bc13fe; /* Le fond se remplit */
+    color: white; /* Le texte devient blanc */
+    box-shadow: 0 0 20px #bc13fe; /* La lueur devient plus forte */
+    transform: scale(1.05); /* Le bouton grossit un peu */
+}

@@ -18,7 +18,7 @@ const SAE = {
       "R1.14": "Représentation et traitement de l’information",
       "R1.16": "Économie, gestion et droit du numérique",
     },
-    "pdf": "pdfs/you-are-a-pussy.pdf",
+    "pdf": "pdfs/SAÉ 101.pdf",
     "semestre": 1
   },
 
@@ -36,7 +36,7 @@ const SAE = {
       "R1.05": "Stratégies de communication et marketing",
       "R1.06": "Expression, communication et rhétorique",
     },
-    "pdf": "pdfs/you-are-a-pussy.pdf",
+    "pdf": "pdfs/SAÉ 102.pdf",
     "semestre": 1
   },
 
@@ -54,7 +54,7 @@ const SAE = {
       "R1.09": "Culture artistique",
       "R1.14": "Représentation et traitement de l’information",
     },
-    "pdf": "pdfs/you-are-a-pussy.pdf",
+    "pdf": "pdfs/SAÉ 103.pdf",
     "semestre": 1
   },
 
@@ -73,7 +73,7 @@ const SAE = {
       "R1.10": "Production audio et vidéo",
       "R1.14": "Représentation et traitement de l’information",
     },
-    "pdf": "pdfs/you-are-a-pussy.pdf",
+    "pdf": "pdfs/SAE 104.pdf",
     "semestre": 1
   },
 
@@ -92,7 +92,7 @@ const SAE = {
       "R1.12": "Développement Web",
       "R1.13": "Hébergement",
     },
-    "pdf": "pdfs/you-are-a-pussy.pdf",
+    "pdf": "pdfs/SAÉ 105.pdf",
     "semestre": 1
   },
 
@@ -115,7 +115,7 @@ const SAE = {
       "R1.16": "Économie, gestion et droit du numérique",
       "R1.17": "Projet Personnel et Professionnel",
     },
-    "pdf": "pdfs/you-are-a-pussy.pdf",
+    "pdf": "pdfs/SAÉ 106.pdf",
     "semestre": 1
   },
 
@@ -133,7 +133,7 @@ const SAE = {
       "R2.04": "Culture numérique",
       "R2.16": "Représentation et traitement de l’information",
     },
-    "pdf": "pdfs/you-are-a-pussy.pdf",
+    "pdf": "pdfs/SAÉ 201.pdf",
     "semestre": 2
   },
 
@@ -175,7 +175,7 @@ const SAE = {
       "R2.18": "Économie, gestion et droit du numérique",
       "R2.19": "Projet Personnel et Professionnel",
     },
-    "pdf": "pdfs/you-are-a-pussy.pdf",
+    "pdf": "pdfs/SAÉ 202.pdf",
     "semestre": 2
   },
 
@@ -196,7 +196,7 @@ const SAE = {
       "R2.14": "Système d’information",
       "R2.15": "Hébergement",
     },
-    "pdf": "pdfs/you-are-a-pussy.pdf",
+    "pdf": "pdfs/SAÉ 203.pdf",
     "semestre": 2
   },
 
@@ -212,7 +212,7 @@ const SAE = {
       "R2.06": "Expression, communication et rhétorique",
       "R2.19": "Projet Personnel et Professionnel",
     },
-    "pdf": "pdfs/you-are-a-pussy.pdf",
+    "pdf": "pdfs/SAE 204.pdf",
     "semestre": 2
   }
 }

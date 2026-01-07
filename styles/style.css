@@ -11,7 +11,7 @@ body {
     /* Image de fond avec un filtre sombre par dessus */
 }
 
-/* Optimisation : Utiliser un pseudo-élément pour le fond fixe améliore grandement la fluidité */
+/* Utiliser un pseudo-élément pour le fond fixe améliore grandement la fluidité */
 body::before {
     content: "";
     position: fixed; /* Remplace background-attachment: fixed de manière plus performante */
@@ -46,19 +46,19 @@ body::before {
 /* --- TITRES --- */
 h1, h2, h3 {
     font-family: 'Orbitron', sans-serif; /* Application de la police futuriste */
-    text-transform: uppercase; /* Met tout en majuscules */
-    text-align: center; /* Centre le texte */
+    text-transform: uppercase; /* Texte en majuscule */
+    text-align: center;
 }
 
 h1 {
     color: #fff;
-    text-shadow: 0 0 10px #00f3ff; /* Effet de lumière (néon) bleu autour du texte */
+    text-shadow: 0 0 10px #00f3ff; /* Effet néon bleu autour du texte */
     margin-top: 30px;
 }
 
 /* --- BOUTONS ET LIENS --- */
 a {
-    text-decoration: none; /* Enlève le soulignement moche des liens */
+    text-decoration: none;
 }
 
 /* Style du bouton "ENTRER" sur l'accueil */
@@ -69,9 +69,9 @@ a {
     padding: 15px; /* Espace intérieur */
     text-align: center;
     background-color: #00f3ff; /* Fond bleu néon */
-    color: black; /* Texte noir */
+    color: black; 
     font-weight: bold;
-    border-radius: 5px; /* Coins arrondis */
+    border-radius: 5px; 
     box-shadow: 0 0 15px #00f3ff; /* Lumière autour du bouton */
 }
 .btn-start:hover {
@@ -86,14 +86,14 @@ a {
     margin: 40px auto;
     padding: 10px;
     text-align: center;
-    border: 1px solid #00f3ff; /* Juste une bordure bleue */
-    color: #00f3ff; /* Texte bleu */
+    border: 1px solid #00f3ff; /* bordure bleue */
+    color: #00f3ff; 
     transition: 0.3s; /* Animation douce */
 }
 /* Au survol de la souris sur le bouton retour */
 .btn-retour:hover {
-    background-color: #00f3ff; /* Le fond devient bleu */
-    color: black; /* Le texte devient noir */
+    background-color: #00f3ff; 
+    color: black; 
 }
 
 /* --- GRILLE DES PROJETS (sae.html) --- */
@@ -102,19 +102,19 @@ a {
     /* Crée des colonnes automatiques de minimum 350px de large */
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
     gap: 20px; /* Espace entre les cases */
-    max-width: 1000px; /* Largeur max de la grille */
-    margin: 0 auto; /* Centrage de la grille */
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 /* Style de chaque carte SAE */
 .sae-card {
     background: rgba(10, 15, 30, 0.8); /* Fond bleu foncé transparent */
-    border: 1px solid #00f3ff; /* Bordure fine bleue */
+    border: 1px solid #00f3ff;
     padding: 20px;
     color: white;
     transition: 0.3s; /* Animation au survol */
-    display: flex; /* Pour aligner le contenu */
+    display: flex; 
     justify-content: space-between; /* Espace entre gauche et droite */
     align-items: center; /* Centrage vertical */
 }
@@ -123,7 +123,7 @@ a {
 .sae-card:hover {
     transform: scale(1.02); /* Grossit légèrement */
     box-shadow: 0 0 20px rgba(0, 243, 255, 0.4); /* Ombre lumineuse */
-    border-color: #bc13fe; /* La bordure devient violette */
+    border-color: #bc13fe;
 }
 
 .sae-card h3 {
@@ -133,13 +133,13 @@ a {
 
 .sae-card p {
     font-size: 0.9em; /* Texte un peu plus petit */
-    color: #ddd; /* Gris clair */
-    margin: 0 10px; /* Marges sur les côtés */
+    color: #ddd; 
+    margin: 0 10px; 
     flex: 1; /* Prend toute la place disponible au milieu */
 }
 
 .fleche {
-    color: #bc13fe; /* Flèche violette */
+    color: #bc13fe; 
     font-weight: bold;
 }
 
@@ -147,14 +147,14 @@ a {
 #contenu-detail {
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.8); /* Fond noir transparent */
+    background: rgba(0, 0, 0, 0.8); 
     padding: 30px;
     border-left: 4px solid #bc13fe; /* Barre violette à gauche */
 }
 
 #contenu-detail h3 {
-    text-align: left; /* Titres alignés à gauche */
-    color: #bc13fe; /* Titres en violet */
+    text-align: left; 
+    color: #bc13fe; 
     border-bottom: 1px solid gray; /* Ligne grise sous le titre */
     padding-bottom: 10px;
 }
@@ -168,21 +168,21 @@ ul {
 .btn-pdf {
     display: inline-block;
     padding: 15px 30px;
-    background-color: transparent; /* Fond transparent */
-    color: #bc13fe; /* Texte rose/violet */
-    border: 2px solid #bc13fe; /* Bordure rose/violet */
+    background-color: transparent; 
+    color: #bc13fe; 
+    border: 2px solid #bc13fe; 
     font-family: 'Orbitron', sans-serif; /* Police futuriste */
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
     transition: 0.3s; /* Animation douce */
-    box-shadow: 0 0 10px rgba(188, 19, 254, 0.3); /* Légère lueur */
+    box-shadow: 0 0 10px rgba(188, 19, 254, 0.3); /* lumière faible */
 }
 
 /* Quand on passe la souris dessus */
 .btn-pdf:hover {
     background-color: #bc13fe; /* Le fond se remplit */
-    color: white; /* Le texte devient blanc */
+    color: white; 
     box-shadow: 0 0 20px #bc13fe; /* La lueur devient plus forte */
     transform: scale(1.05); /* Le bouton grossit un peu */
 }
